@@ -1,4 +1,3 @@
-
 function showVaribles(){
     // variables
     console.clear();
@@ -149,13 +148,11 @@ function showLoops(){
                 i--;
             };
             console.groupEnd();
-
             console.group('for - number 25');
                 for( let j = 25; j >= 0; j--) {
                     console.log('j :>> ', j);
                 };
             console.groupEnd();
-
             let z = 25;
             console.group('do while - number 25');
                 do {
@@ -164,7 +161,6 @@ function showLoops(){
                 } while (z >= 0);
             console.groupEnd();
         console.groupEnd();
-
         // 2
         console.groupCollapsed('2');
             console.group('while - from 10 to 50');
@@ -174,13 +170,11 @@ function showLoops(){
                 num1 += 5;
             };
             console.groupEnd();
-
             console.group('for - from 10 to 50');
                 for( let j = 10; j <= 50; j += 5) {
                     console.log('j :>> ', j);
                 };
             console.groupEnd();
-
             num1 = 10;
             console.group('do while - from 10 to 50');
                 do {
@@ -201,7 +195,6 @@ function showLoops(){
             };
             console.log('res :>> ', res);
             console.groupEnd();
-
             res = 0;
             console.group('for - sum from 1 to 100');
                 for( let j = 1; j <= 100; j++) {
@@ -209,7 +202,6 @@ function showLoops(){
                 };
                 console.log('res :>> ', res);
             console.groupEnd();
-
             num2 = 1;
             res = 0;
             console.group('do while - sum from 1 to 100');
@@ -220,7 +212,6 @@ function showLoops(){
                 console.log('res :>> ', res);
             console.groupEnd();
         console.groupEnd();
-
         // 4
         console.group('4');
             let userNum;
@@ -230,7 +221,6 @@ function showLoops(){
                 };
                 console.log('userNum is :>> ', userNum);
             console.groupEnd();
-
             console.group('for - 2 + 2 * 2');
                 for(let j = 1; j <= Infinity; j++) {
                     userNum = +prompt('How much is 2 + 2 * 2 ?');
@@ -240,7 +230,6 @@ function showLoops(){
                 };
                 console.log('userNum is :>> ', userNum);
             console.groupEnd();
-
             console.group('do while - 2 + 2 * 2');
                 do {
                     userNum = +prompt('How much is 2 + 2 * 2 ?');
