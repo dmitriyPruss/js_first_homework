@@ -183,7 +183,6 @@ function showLoops(){
                 } while (num1 <= 50);
             console.groupEnd();
         console.groupEnd();
-
         // 3
         console.groupCollapsed('3');
             let num2 = 1;
