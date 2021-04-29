@@ -1,5 +1,20 @@
+/*
+Использовал функции для обработки событий и прикрепил их к тегам div с целью 
+разгруппирования результатов и лучшего визуального отображения работы js
++ повторение ранее изученного материала по верстке)
+*/
+
 function showVaribles(){
     // variables
+
+    /*
+    Знаю что MDN "ругается" на console.clear(), но решил использовать для лучшего восприятия
+    результатов работы скрипта:
+    
+    https://developer.mozilla.org/ru/docs/Web/API/Console/clear
+    Не стандартно
+    Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.
+    */
     console.clear();
     console.groupCollapsed("VARIABLES");
         // 1
@@ -71,8 +86,8 @@ function showIf(){
     console.group("IF");
         // 1
         console.group('1');
-            const numVar4 = +prompt('Enter the number, mr. User');
-            if (numVar4 === 10) {
+            const numVar = +prompt('Enter the number, mr. User');
+            if (numVar === 10) {
                 console.log("Верно");
             } else {
                 console.log("Неверно");
@@ -81,27 +96,27 @@ function showIf(){
         // 2
         console.groupCollapsed('2');
             // if(test)
-            let test = true;
-            if (test) {
+            const test1 = true;
+            if (test1) {
                 console.log('Верно');
             } else {
                 console.log('Неверно');
             };
-            test = false;
-            if (test) {
+            const test2 = false;
+            if (test2) {
                 console.log('Верно');
             } else {
                 console.log('Неверно');
             };
             // if(!test)
-            test = true;
-            if (!test) {
+            const test3 = true;
+            if (!test3) {
                 console.log('Верно');
             } else {
                 console.log('Неверно');
             };
-            test = false;
-            if (!test) {
+            const test4 = false;
+            if (!test4) {
                 console.log('Верно');
             } else {
                 console.log('Неверно');
@@ -109,24 +124,21 @@ function showIf(){
         console.groupEnd();
         // 3
         console.group('3');
-            let money = Number(prompt("Enter money..."));
+            const money = Number(prompt("Enter money..."));
             if (!Number.isNaN(money)) { 
                 if (money > 500 && money <= 800) {
-                    money -= money * 0.03;
-                    money = money.toFixed(2);
-                    console.log('money with the discount 3 percent:>> ', money + '$');
+                    const money3percDisc = money - money * 0.03;
+                    console.log('money with the discount 3 percent:>> ', money3percDisc.toFixed(2) + '$');
                 } else if (money > 800) {
-                    money -= money * 0.05;
-                    money = money.toFixed(2);
-                    console.log('money with the discount 5 percent:>> ', money + '$');
+                    const money5percDisc = money - money * 0.05;
+                    console.log('money with the discount 5 percent:>> ', money5percDisc.toFixed(2) + '$');
                 } else {
-                    money = money.toFixed(2);
-                    console.log('You don`t have any discounts :>> ', money + '$');
+                    console.log('You don`t have any discounts :>> ', money.toFixed(2) + '$');
                 };
             } else {
-                let answer = confirm('You do not enter a number... Are you blind?');
+                const answer = confirm('You do not enter a number... Are you blind?');
                 if (answer) {
-                    console.log('You are blind, my friend');
+                    console.log('You are blind...');
                 } else {
                     console.log("You aren`t blind. It is very good)");
                 };

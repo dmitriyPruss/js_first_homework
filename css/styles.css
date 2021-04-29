@@ -19,10 +19,14 @@ h1 {
     text-align: center;
     margin-top: 50px;
 }
-.container {
+main {
     height: 70%;
     width: 55%;
     margin: 50px auto 0;
+}
+.container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -32,37 +36,37 @@ h1 {
     color: white;
 }
 @media screen and (max-width: 610px) {
-    .container{
+    .container {
         height: 80%;
         display: flex;
         flex-direction: column;
     }
 }
-.container>* {
+.container> div {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container>div:first-child, .container>div:first-child+div {
+.container>div:nth-child(2n), .container>div:nth-child(3n) {
     background: var(--back-element-value);
     height: 70px;
     border-radius: 50%;
 }
-.container>div:first-child {
+.container>div:nth-child(2n) {
     width: 140px;
 }
-.container>div:first-child+div {
+.container>div:nth-child(3n) {
     width: 70px;
 }
-.container>div:nth-child(3n) {
+.container>div:nth-child(4n) {
     width: 50px;
     height: 50px;
     transform: rotate(45deg);
     background: var(--back-element-value);
     border-radius: 2px;
 }
-.container>div:nth-child(3n) p {
+.container>div:nth-child(4n) p {
     transform: rotate(-45deg);
 }
 .container>div:last-child {
