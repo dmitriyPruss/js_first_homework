@@ -153,20 +153,20 @@ function showLoops(){
     console.group("LOOPS");
         // 1
         console.groupCollapsed('1');
-            let i = 25;
             console.group('while - number 25');
-            while (i >= 0) {
-                console.log('i :>> ', i);
-                i--;
-            };
+                let i = 25;
+                while (i >= 0) {
+                    console.log('i :>> ', i);
+                    i--;
+                };
             console.groupEnd();
             console.group('for - number 25');
-                for( let j = 25; j >= 0; j--) {
+                for(let j = 25; j >= 0; j--) {
                     console.log('j :>> ', j);
                 };
             console.groupEnd();
-            let z = 25;
             console.group('do while - number 25');
+                let z = 25;
                 do {
                     console.log('z :>> ', z);
                     z--;
@@ -175,20 +175,20 @@ function showLoops(){
         console.groupEnd();
         // 2
         console.groupCollapsed('2');
-            console.group('while - from 10 to 50');
             let num1 = 10;
-            while (num1 <= 50) {
-                console.log('num: >> ', num1);
-                num1 += 5;
-            };
+            console.group('while - from 10 to 50');
+                while (num1 <= 50) {
+                    console.log('num: >> ', num1);
+                    num1 += 5;
+                };
             console.groupEnd();
             console.group('for - from 10 to 50');
-                for( let j = 10; j <= 50; j += 5) {
+                for(let j = 10; j <= 50; j += 5) {
                     console.log('j :>> ', j);
                 };
             console.groupEnd();
-            num1 = 10;
             console.group('do while - from 10 to 50');
+                num1 = 10;
                 do {
                     console.log('num: >> ', num1);
                     num1 += 5;
@@ -200,22 +200,22 @@ function showLoops(){
             let num2 = 1;
             let res = 0;
             console.group('while - sum from 1 to 100');
-            while (num2 <= 100) {
-                res += num2;
-                num2++;
-            };
-            console.log('res :>> ', res);
+                while (num2 <= 100) {
+                    res += num2;
+                    num2++;
+                };
+                console.log('res :>> ', res);
             console.groupEnd();
-            res = 0;
             console.group('for - sum from 1 to 100');
-                for( let j = 1; j <= 100; j++) {
+                res = 0;
+                for(let j = 1; j <= 100; j++) {
                     res += j;
                 };
                 console.log('res :>> ', res);
             console.groupEnd();
-            num2 = 1;
-            res = 0;
             console.group('do while - sum from 1 to 100');
+                num2 = 1;
+                res = 0;
                 do {
                     res += num2;
                     num2++;
@@ -228,13 +228,13 @@ function showLoops(){
             let userNum;
             console.group('while - 2 + 2 * 2');
                 while (userNum !== 6) {
-                    userNum = +prompt('How much is 2 + 2 * 2 ?');
+                    userNum = +prompt('while - How much is 2 + 2 * 2 ?');
                 };
                 console.log('userNum is :>> ', userNum);
             console.groupEnd();
             console.group('for - 2 + 2 * 2');
                 for(let j = 1; j <= Infinity; j++) {
-                    userNum = +prompt('How much is 2 + 2 * 2 ?');
+                    userNum = +prompt('for - How much is 2 + 2 * 2 ?');
                     if (userNum === 6) {
                         break;
                     };
@@ -243,9 +243,9 @@ function showLoops(){
             console.groupEnd();
             console.group('do while - 2 + 2 * 2');
                 do {
-                    userNum = +prompt('How much is 2 + 2 * 2 ?');
+                    userNum = +prompt('do while - How much is 2 + 2 * 2 ?');
                 } while (userNum !== 6);
-                console.log('userNum  :>> ', userNum );
+                console.log('userNum  :>> ', userNum);
             console.groupEnd();
         console.groupEnd();
     console.groupEnd();
