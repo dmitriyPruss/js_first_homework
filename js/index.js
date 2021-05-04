@@ -62,9 +62,9 @@ function showPrompt(){
     console.clear();
     console.group("PROMPT");
         // 1
-        let numVar1 = prompt('Enter the number, please...');
-        numVar1 *= numVar1;
-        console.log('the number to the second power:>> ', numVar1);
+        const numVar1 = prompt('Enter the number, please...');
+        const powVar = numVar1 * numVar1;
+        console.log('the number to the second power:>> ', powVar);
         // 2
         const numVar2 = +prompt('Enter the first number, please...');
         const numVar3 = +prompt('Enter the second number, please...');
@@ -233,7 +233,7 @@ function showLoops(){
                 console.log('userNum is :>> ', userNum);
             console.groupEnd();
             console.group('for - 2 + 2 * 2');
-                for(let j = 1; j <= Infinity; j++) {
+                for(;;) {
                     userNum = +prompt('for - How much is 2 + 2 * 2 ?');
                     if (userNum === 6) {
                         break;
